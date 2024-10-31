@@ -1,1 +1,55 @@
 /* Place CSS styles here */
+body{
+    background-color: black;
+    background-image: url(../img/background.svg);
+    animation: flicker 5s forwards;
+}
+@font-face {
+    font-family:"geauxfont";
+    src: url(../font/Richardson\ Brand\ Revolution\ Block.otf)
+}
+h1 {
+    color: white;
+    font-family: "geauxfont";
+    font-size: 30vh;
+    letter-spacing: 6px;
+    line-height: 0.9;
+    text-align:center;
+}
+.geaux-text {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    height:100vh;
+    opacity:1;
+    animation: flicker 5s forwards;
+}
+@keyframes flicker {
+    0%, 3%, 6%, 9%, 12%, 15%, 18% {
+        background-image:none;
+        background-color: black;
+        opacity:0;
+    }
+    1%, 4%, 7%, 10%, 13%, 16% {
+        background-image: url(../img/background.svg);
+    }
+    20%{
+        background-image:none;
+        background-color: black;
+        opacity:0;
+    }
+    25% {
+        background-image: url(../img/background.svg);
+        opacity:1;
+    }
+    30%{
+        background-image:none;
+        background-color: black;
+        opacity:0;
+    }
+    35%,70%,100%{
+        background-image:url(../img/background.svg);
+        opacity:1;
+    }
+}
+
